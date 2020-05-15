@@ -1,4 +1,4 @@
-console.log('works');
+
 
 function submit() {
   event.preventDefault();
@@ -14,7 +14,7 @@ function fetchResult(searInput) {
     .then((data) => {
       const results = data.query.search;
 
-      console.log(results);
+
       showResults(results);
     });
 }
