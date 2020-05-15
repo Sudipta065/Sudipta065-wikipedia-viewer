@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./script.js"></script>
+    <link href="./style.css" rel="stylesheet" />
+    <title>Wiki Viewer</title>
+  </head>
+
+  <body>
+    <h1>Wiki Viewer</h1>
+    <div class="container">
+      <div class="search-div">
+        <input class="search-input" placeholder="Search for..." />
+        <button value="send" class="button-submit btn" onclick="submit()">
+          Search
+        </button>
+      </div>
+      <div class="random-div">
+        <button
+          class="random-btn btn"
+          onClick="parent.open('https://en.wikipedia.org/wiki/Special:Random')"
+        >
+          Random WIKI Article!!!
+        </button>
+      </div>
+      <section class="showResult"></section>
+    </div>
+  </body>
+</html>
