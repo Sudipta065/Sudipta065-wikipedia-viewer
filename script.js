@@ -1,11 +1,12 @@
-
-
 function submit() {
   event.preventDefault();
-  let searchInput = document.querySelector('.search-input').value;
+  let searching = document.querySelector('.search-input');
+  let searchInput = searching.value;
   fetchResult(searchInput);
 }
 
+const form = document.getElementById('form');
+form.addEventListener('submit', submit);
 function fetchResult(searInput) {
   const urlApi = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searInput}`;
 
@@ -13,7 +14,6 @@ function fetchResult(searInput) {
     .then((response) => response.json())
     .then((data) => {
       const results = data.query.search;
-
 
       showResults(results);
     });
