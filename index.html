@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="./script.js"></script>
+
     <link href="./style.css" rel="stylesheet" />
     <title>Wiki Viewer</title>
   </head>
@@ -12,12 +12,14 @@
   <body>
     <h1>Wiki Viewer</h1>
     <div class="container">
-      <div class="search-div">
-        <input class="search-input" placeholder="Search for..." />
-        <button value="send" class="button-submit btn" onclick="submit()">
-          Search
-        </button>
-      </div>
+      <form id="form" class="form">
+        <div class="search-div">
+          <input class="search-input" type="text" placeholder="Search for..." />
+          <button type="submit" value="send" class="button-submit btn">
+            Search
+          </button>
+        </div>
+      </form>
       <div class="random-div">
         <button
           class="random-btn btn"
@@ -28,5 +30,6 @@
       </div>
       <section class="showResult"></section>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
